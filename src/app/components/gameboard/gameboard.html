@@ -1,0 +1,16 @@
+
+<timer [hidden]="gameFinished"></timer>
+<h2 *ngIf="gameFinished">
+    GEWONNEN!!!! 
+    <span *ngIf="finishTime < 60000">Du hast nur {{finishTime | secondsToString}} lang gebraucht</span>
+    <span *ngIf="finishTime > 60000">Puh. {{finishTime | secondsToString}} sind sehr lang!</span>
+</h2>
+<div class="flex">
+    <card *ngFor="let cardstring of cards"
+          (cardClick)="onCardClicked($event)"
+          [id]="cardstring">
+    </card>
+</div>
+<div class="flex-center">
+    <button (click)="onNeustartClicked()" class="button">neu starten</button>
+</div>

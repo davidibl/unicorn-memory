@@ -1,0 +1,54 @@
+@import "./variables.scss";
+@import "../../node_modules/getbase/src/scss/base.scss";
+@import "../../node_modules/getbase/src/scss/base/_helpers.scss";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "./helpers.scss";
+@import "./_centeredMenuHeader.scss";
+@import "./_game.scss";
+@import "./_button.scss";
+
+
+// Headings
+
+.alt-font {
+    font-family:                                $base-heading-font-family-alternate;
+}
+
+.page-heading {
+    width:                                      100%;
+    margin-bottom:                              40px;
+    margin-top:                                 25px;
+
+    h1 {
+        font-size:                              4rem;
+        margin-bottom:                          4px;
+    }
+}
+
+.lv {
+    color:                                      #008060;
+    font-weight:                                normal;
+}
+
+.main-content {
+    padding-top:                                $header-height + 40px;
+
+    @media (max-width: $breakpoint-m - 1) {
+        padding-top:                            $responsive-header-height + 15px;
+    }
+
+    width: 720px;
+}
+
+small {
+    font-size:                                  $small-font-size;
+}
+
+.small {
+    font-size:                                  $small-font-size;
+}
+
+p {
+    text-align:                                 justify;
+}
