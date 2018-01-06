@@ -3,7 +3,6 @@ import { TranslationService } from '../services/translationService';
 
 @Pipe({
     name: 'translateEnum',
-    pure: false,
 })
 export class TranslateEnumPipe implements PipeTransform {
 
@@ -11,7 +10,7 @@ export class TranslateEnumPipe implements PipeTransform {
     }
 
     public transform(key: string, name: string): string {
-        let finalKey = (name !== null) ? `ENUMS.${name}.${key}` : key;
+        const finalKey = (name !== null) ? `ENUMS.${name}.${key}` : key;
         return this._translationService.translateDefault(finalKey, key);
     }
 }

@@ -29,31 +29,5 @@
                 ]
             }
         }
-    ],
-    "dataGroups": [
-        {
-            "name": "recipe-api",
-            "urls": [
-                "https://recipe.xnoname.com/api/**"
-            ],
-            "cacheConfig": {
-                "strategy": "freshness",
-                "maxSize": 400,
-                "maxAge": "1h",
-                "timeout": "3s"
-            }
-        },
-        {
-            "name": "image-api",
-            "urls": [
-                "https://files.xnoname.com/api/**"
-            ],
-            "cacheConfig": {
-                "strategy": "freshness",
-                "maxSize": 400,
-                "maxAge": "1h",
-                "timeout": "3s"
-            }
-        }
     ]
 }

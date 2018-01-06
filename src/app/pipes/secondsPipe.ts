@@ -11,9 +11,9 @@ export class SecondsPipe implements PipeTransform {
     }
 
     public transform(seconds: number): string {
-        let date = new Date(null);
+        const date = new Date(null);
         date.setSeconds(seconds);
-        let timstring = date.toISOString().substr(11, 8);
+        const timstring = date.toISOString().substr(11, 8);
         return timstring;
     }
 }
