@@ -3,8 +3,9 @@ import { APP_BASE_HREF } from '@angular/common';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +18,14 @@ import { CONFIGURATION } from './configuration';
 @NgModule({
     bootstrap: [AppComponent],
     declarations: [AppComponent, ...ALL_COMPONENTS, ...ALL_PIPES],
-    imports: [BrowserModule, HttpModule, FormsModule, RouterModule, routing],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        FormsModule,
+        RouterModule,
+        routing,
+        ServiceWorkerModule.register('/ngsw-worker.js'),
+    ],
     providers: [
         ...ALL_SERVICES,
         { provide: APP_BASE_HREF, useValue: '/' },

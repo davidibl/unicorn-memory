@@ -1,15 +1,4 @@
-gameboard {
-    div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: auto;
-        max-width: 960px;
-        width: 100%;
-    }
-}
-
-card {
+:host {
     border: 1px solid gray;
     align-content: center;
     border: 1px solid #333;
@@ -23,7 +12,7 @@ card {
     width: 130px;
     height: 130px;
 
-    background-image: url(../img/cardback.png);
+    background-image: url(../../../assets/img/cardback.png);
     background-size: 130px 130px;
     img {
         z-index: -1;

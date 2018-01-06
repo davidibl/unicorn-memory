@@ -1,52 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
+
 <head>
-    <base href="/">
-    <!-- Set the base href -->
-    <script>document.write('<base href="'+ document.location +'"/>');</script>
-    <meta charset="UTF-8">
-    <title>david ibl - unicorn memory</title>
+  <meta charset="utf-8">
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PJ5RV48');</script>
+  <title>david ibl - unicorn memory</title>
+  <base href="/">
 
-    <!-- inject:js -->
-    <!-- endinject -->
-
-    <script>
-        System.config({
-            baseURL: '.',
-            paths: {
-                'lib:': 'lib/'
-            },
-            map: {
-                '@angular/core': 'lib:/@angular/core/bundles/core.umd.js',
-                '@angular/common': 'lib:/@angular/common/bundles/common.umd.js',
-                '@angular/compiler': 'lib:/@angular/compiler/bundles/compiler.umd.js',
-                '@angular/platform-browser': 'lib:/@angular/platform-browser/bundles/platform-browser.umd.js',
-                '@angular/platform-browser-dynamic': 'lib:/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-                '@angular/http': 'lib:/@angular/http/bundles/http.umd.js',
-                '@angular/router': 'lib:/@angular/router/bundles/router.umd.js',
-                '@angular/forms': 'lib:/@angular/forms/bundles/forms.umd.js',
-                'rxjs': 'lib:/rxjs',
-                'moment': 'lib:/moment',
-                'jsrsasign': 'lib/jsrsasign/lib',
-            },
-            packages: {
-                app: { format: 'register', defaultExtension: 'js' },
-                'rxjs': { defaultExtension: 'js' },
-                'moment': { main: 'moment.js', defaultExtension: 'js' },
-                'jsrsasign': { main: 'jsrsasign.js', defaultExtension: 'js' }
-            }
-        });
-        System.import('app/main')
-                .then(null, console.error.bind(console));
-    </script>
-
-    <!-- inject:css -->
-    <!-- endinject -->
-
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="theme-color" content="#7c5849">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-    <app>
-    </app>
+    <xn-app>
+    </xn-app>
+
 </body>
+
 </html>

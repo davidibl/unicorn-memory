@@ -1,20 +1,25 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "ES5",
-    "module": "system",
-    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false
-  },
-  "exclude": [
-    "build",
-    "node_modules",
-    "test",
-    "testing",
-    "typings/main",
-    "typings/main.d.ts"
-  ]
+    "target": "es5",
+    "paths": {
+        "@angular/*": ["../node_modules/@angular/*"],
+        "@xnoname/*": ["../web-common/src/*"],
+        "rxjs/*": ["../node_modules/rxjs/*"]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  }
+
 }

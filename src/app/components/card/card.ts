@@ -1,9 +1,9 @@
 import { Component, Input, HostListener, HostBinding, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    moduleId: __moduleName,
-    selector: 'card',
+    selector: 'xn-card',
     templateUrl: 'card.html',
+    styleUrls: ['card.scss'],
 })
 export class CardComponent {
 
@@ -14,9 +14,9 @@ export class CardComponent {
     public cardClick: EventEmitter<CardComponent> = new EventEmitter<CardComponent>();
 
     @HostBinding('class.open')
-    public open: boolean = false;
+    public open = false;
 
-    public found: boolean = false;
+    public found = false;
 
     @HostListener('click')
     public onCardClick() {

@@ -18,8 +18,8 @@ export class TranslationService {
     }
 
     public translateDefault(key: string, defaultValue?: string): string {
-        let translations = this._registeredLanguagesAndTranslations[Language.DE];
-        let translation = translations && translations[key]
+        const translations = this._registeredLanguagesAndTranslations[Language.DE];
+        const translation = translations && translations[key]
             || defaultValue;
         return translation;
     }

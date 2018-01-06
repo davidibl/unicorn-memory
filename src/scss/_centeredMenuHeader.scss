@@ -10,7 +10,7 @@ $menu-item-margin:                                  20px;
 $menu-item-color:                                   $brand-primary;
 $menu-item-hover-color:                             lighten($menu-item-color, 30%);
 
-centered-menu-header {
+xn-centered-menu-header {
 
     position:                                       fixed;
     width:                                          100%;
@@ -46,8 +46,8 @@ centered-menu-header {
             @extend .left;
 
             font:                                   $brand-name-font;
-            margin-top:                             -2px; 
-        }   
+            margin-top:                             -2px;
+        }
 
         ul {
             @extend                                 .none;
@@ -61,7 +61,7 @@ centered-menu-header {
 
         li {
             @extend .left;
-            
+
             list-style:                             none;
             margin-right:                           $menu-item-margin;
             cursor:                                 pointer;

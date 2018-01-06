@@ -1,0 +1,59 @@
+{
+    "index": "/index.html",
+    "assetGroups": [
+        {
+            "name": "app",
+            "installMode": "prefetch",
+            "resources": {
+                "files": [
+                    "/favicon.ico",
+                    "/index.html"
+                ],
+                "versionedFiles": [
+                    "/*.bundle.css",
+                    "/*.bundle.js",
+                    "/*.chunk.js"
+                ]
+            }
+        },
+        {
+            "name": "assets",
+            "installMode": "lazy",
+            "updateMode": "prefetch",
+            "resources": {
+                "files": [
+                    "/assets/**"
+                ],
+                "urls": [
+                    "https://fonts.googleapis.com/**"
+                ]
+            }
+        }
+    ],
+    "dataGroups": [
+        {
+            "name": "recipe-api",
+            "urls": [
+                "https://recipe.xnoname.com/api/**"
+            ],
+            "cacheConfig": {
+                "strategy": "freshness",
+                "maxSize": 400,
+                "maxAge": "1h",
+                "timeout": "3s"
+            }
+        },
+        {
+            "name": "image-api",
+            "urls": [
+                "https://files.xnoname.com/api/**"
+            ],
+            "cacheConfig": {
+                "strategy": "freshness",
+                "maxSize": 400,
+                "maxAge": "1h",
+                "timeout": "3s"
+            }
+        }
+    ]
+}

@@ -4,9 +4,9 @@ import { Observable } from 'rxjs/Rx';
 import { TimerComponent } from '../timer/timer';
 
 @Component({
-    moduleId: __moduleName,
-    selector: 'gameboard',
+    selector: 'xn-gameboard',
     templateUrl: 'gameboard.html',
+    styleUrls: ['gameboard.scss'],
 })
 export class GameboardComponent implements OnInit, AfterViewInit {
 
@@ -18,8 +18,8 @@ export class GameboardComponent implements OnInit, AfterViewInit {
     private currentSelectedCard: CardComponent = null;
 
     public cards: string[] = new Array<string>();
-    public gameFinished: boolean = false;
-    public finishTime: number = 0;
+    public gameFinished = false;
+    public finishTime = 0;
 
     public ngOnInit() {
         this.cards = new Array<string>();
@@ -61,7 +61,7 @@ export class GameboardComponent implements OnInit, AfterViewInit {
             return;
         }
 
-        let cardToClose = this.currentSelectedCard;
+        const cardToClose = this.currentSelectedCard;
         this.currentSelectedCard = null;
 
         Observable.timer(800).subscribe(() => {

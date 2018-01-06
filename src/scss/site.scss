@@ -1,3 +1,4 @@
+$fa-font-path: '../../node_modules/font-awesome/fonts';
 @import "./variables.scss";
 @import "../../node_modules/getbase/src/scss/base.scss";
 @import "../../node_modules/getbase/src/scss/base/_helpers.scss";
@@ -5,7 +6,6 @@
 @import "../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
 @import "./helpers.scss";
 @import "./_centeredMenuHeader.scss";
-@import "./_game.scss";
 @import "./_button.scss";
 
 
