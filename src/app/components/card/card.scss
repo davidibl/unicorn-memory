@@ -1,25 +1,52 @@
+@import "../../../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "../../../scss/variables.scss";
+@import "../../../../node_modules/getbase/src/scss/base.scss";
+
 :host {
     border: 1px solid gray;
     align-content: center;
     border: 1px solid #333;
-    display: flex;
+    display: block;
+    position: relative;
     flex-basis: 1;
     font-size: 3em;
     justify-content: center;
     margin-bottom: 10px;
 
     // maintain aspect ratio
-    width: 130px;
-    height: 130px;
+    width: calc(20% - 10px);
+    flex: 1 0 auto;
+    height:auto;
 
     background-image: url(../../../assets/img/cardback.png);
-    background-size: 130px 130px;
+    background-size: 100% 100%;
     img {
         z-index: -1;
-        height: 130px;
+        width: 100%;
+        height: auto;
     }
 
     &.open {
         background-image: inherit;
     }
+
+    .content{
+        position:  absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: $breakpoint-m - 1) {
+    :host {
+        width: calc(25% - 10px);
+    }
+}
+
+:host:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
 }

@@ -32,13 +32,15 @@ $fa-font-path: '../../node_modules/font-awesome/fonts';
 }
 
 .main-content {
-    padding-top:                                $header-height + 40px;
+    padding-top:                                calc(#{$header-height + 10px});
+    padding-bottom:                             20px;
+    height:                                     calc(100% - #{$header-height});
 
     @media (max-width: $breakpoint-m - 1) {
-        padding-top:                            $responsive-header-height + 15px;
+        padding-top:                            $responsive-header-height + 25px;
     }
 
-    width: 720px;
+    width: 100%;
 }
 
 small {

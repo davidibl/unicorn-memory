@@ -1,5 +1,7 @@
 
-<xn-timer [hidden]="gameFinished"></xn-timer>
+<div class="flex flex-center">
+    <xn-timer [hidden]="gameFinished"></xn-timer>
+</div>
 <h2 *ngIf="gameFinished">
     GEWONNEN!!!!
     <span *ngIf="finishTime < 60000">Du hast nur {{finishTime | secondsToString}} lang gebraucht</span>
@@ -11,6 +13,6 @@
           [id]="cardstring">
     </xn-card>
 </div>
-<div class="flex-center flex">
+<div class="flex-center flex mb20">
     <button (click)="onNeustartClicked()" class="button">neu starten</button>
 </div>
