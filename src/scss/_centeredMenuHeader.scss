@@ -1,6 +1,6 @@
-$centered-menu-header-height:                       35px;
-$centered-menu-header-height-responsive:            35px;
-$centered-menu-header-margin-bottom:                15px;
+$centered-menu-header-height:                       45px;
+$centered-menu-header-height-responsive:            45px;
+$centered-menu-header-margin-bottom:                0;
 $centered-menu-header-background-color:             #fff;
 
 $brand-bar-height:                                  25px;
@@ -33,7 +33,8 @@ xn-centered-menu-header {
         display:                                    flex;
         flex-direction:                             row;
         flex-wrap:                                  wrap;
-        justify-content:                            center;
+        justify-content:                            space-between;
+        align-items: center;
         height:                                     100%;
         padding:                                    5px 5px 5px 5px;
         position:                                   relative;
@@ -50,12 +51,7 @@ xn-centered-menu-header {
         }
 
         ul {
-            @extend                                 .none;
-            @extend                                 .block-m;
-
-            position:                               absolute;
             bottom:                                 0;
-            margin:                                 0 auto 0 auto;
             padding:                                0;
         }
 
@@ -63,6 +59,7 @@ xn-centered-menu-header {
             @extend .left;
 
             list-style:                             none;
+            height:                                 $brand-bar-height;
             margin-right:                           $menu-item-margin;
             cursor:                                 pointer;
 
@@ -78,6 +75,9 @@ xn-centered-menu-header {
                 &.active {
                     color:                          $menu-item-hover-color;
                 }
+            }
+            img {
+                height:                                 $brand-bar-height;
             }
         }
 

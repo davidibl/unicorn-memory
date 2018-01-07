@@ -2,7 +2,7 @@
     "short_name": "uniory",
     "name": "unicorn - memory",
     "start_url": "/",
-    "theme_color": "#7c5849",
+    "theme_color": "#FF2B96",
     "background_color": "#ffffff",
     "display": "standalone",
     "orientation": "portrait",

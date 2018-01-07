@@ -2,11 +2,13 @@
 <div class="flex flex-center">
     <xn-timer [hidden]="gameFinished"></xn-timer>
 </div>
-<h2 *ngIf="gameFinished">
-    GEWONNEN!!!!
-    <span *ngIf="finishTime < 60000">Du hast nur {{finishTime | secondsToString}} lang gebraucht</span>
-    <span *ngIf="finishTime > 60000">Puh. {{finishTime | secondsToString}} sind sehr lang!</span>
-</h2>
+<div class="flex flex-center">
+    <h4 *ngIf="gameFinished">
+        GEWONNEN!!!!
+        <span *ngIf="finishTime < 60000">Du hast nur {{finishTime | secondsToString}} lang gebraucht</span>
+        <span *ngIf="finishTime > 60000">Puh. {{finishTime | secondsToString}} sind sehr lang!</span>
+    </h4>
+</div>
 <div class="flex gameboard">
     <xn-card *ngFor="let cardstring of cards"
           (cardClick)="onCardClicked($event)"
